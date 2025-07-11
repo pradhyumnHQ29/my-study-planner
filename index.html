@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="splash-screen" id="splash">
+  <div class="splash-content">
+    <div class="loader"></div>
+    <p>Getting your Study Goals Ready...</p>
+  </div>
+</div>
+
+  <div class="container">
+    <header>
+      <h1>📘  My Study Planner</h1>
+      <div class="controls">
+        <select id="monthSelect"></select>
+        <button id="themeToggle">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+    <p id="progressText">Progress: 0%</p>
+
+    <div class="calendar" id="calendar"></div>
+  </div>
+
+  <!-- Task Modal -->
+  <div class="modal" id="taskModal">
+    <div class="modal-content">
+      <h2>Task for <span id="selectedDateText"></span></h2>
+      <input type="text" id="taskInput" placeholder="Enter task title" />
+      <select id="tagSelect">
+        <option value="">No Tag</option>
+        <option value="revision">Revision</option>
+        <option value="assignment">Assignment</option>
+        <option value="reading">Reading</option>
+      </select>
+      <div class="modal-buttons">
+        <button id="saveTask">Save</button>
+        <button id="deleteTask">Delete</button>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
